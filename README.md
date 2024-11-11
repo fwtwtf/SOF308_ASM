@@ -1,4 +1,4 @@
-# asm_sof308
+# py00146-lab
 
 ## Project setup
 ```
