@@ -2,12 +2,20 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Lab3Bai1 from "../components/ASM/bai4.vue"
 
+import chitiet from "../components/ASM/postdetil.vue"
+
+
+
+
+
 
 
 
 const routes = [
 
-    { path: '/TrangChu', component: Lab3Bai1 },
+    { path: '/Post', component: Lab3Bai1 },
+    { path: '/TrangChu/PostDeteil', component: chitiet }
+
 
 
 ];

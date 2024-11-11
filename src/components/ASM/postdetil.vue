@@ -1,63 +1,137 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="bai1">
-          <img
-            src="/images/logo-energy-pilates.png"
-            alt="Logo"
-            class="img-fluid"
-            style="max-width: 100px; height: 40px; margin-right: 8px"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="bai2"
-                >Bài viết</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Video</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Giới Thiệu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sự kiện</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tài khoản
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
-                <li><a class="dropdown-item" href="#">Quên Mật khẩu</a></li>
-                <li><a class="dropdown-item" href="#">Đăng kí thành viên</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <span class="navbar-text"> Tiếng Việt | Tiếng Anh </span>
+    <header>
+ 
+  
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#">
+         <img src="/images/1.png" alt="" style="width: 50px;">
+       </a>
+ 
+         <span class="navbar-toggler-icon"></span>
+      
+ 
+       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+           <li class="nav-item"><strong> <a class="nav-link active" aria-current="page" href="/Post">
+               <i class="bi bi-pencil-square"></i> Trang Chủ
+             </a></strong>
+            
+           </li>
+
+
+           <li class="nav-item"><strong> <a class="nav-link active" aria-current="page" href="/Post">
+               <i class="bi bi-pencil-square"></i> Bài viết
+             </a></strong>
+            
+           </li>
+           <li class="nav-item"> <strong><a class="nav-link" href="#">
+               <i class="bi bi-play-btn"></i> Video
+             </a></strong>
+             
+           </li>
+           <li class="nav-item">
+            <strong> <a class="nav-link" href="#">
+               <i class="bi bi-info-circle"></i> Giới Thiệu
+             </a></strong>
+            
+           </li>
+           <li class="nav-item"> <strong><a class="nav-link" href="#">
+               <i class="bi bi-calendar-event"></i> Sự kiện
+             </a></strong>
+             
+           </li>
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="bi bi-person-circle"></i> Tài khoản
+             </a>
+             <ul class="dropdown-menu">
+              
+                <li data-bs-toggle="modal" data-bs-target="#loginModal"><a class="dropdown-item" ><i class="bi bi-box-arrow-in-right" data-bs-toggle="modal" data-bs-target="#loginModal"></i> Đăng nhập</a></li>
+
+             
+               <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i> Quên Mật khẩu</a></li>
+               <li data-bs-toggle="modal" data-bs-target="#registerModal"><a class="dropdown-item" href="#"><i class="bi bi-person-plus"></i> Đăng kí thành viên</a></li>
+             </ul>
+           </li>
+
+           
+           
+         </ul>
+
+         
+
+       
+
+         <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </nav>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="registerPassword" placeholder="Enter your password" required>
+          </div>
+          <div class="mb-3">
+            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+ 
+        
+       </div> 
+     </div>
+   </nav>
+
+
+
+
+  
+  
+</header>
     <div class="container">
       <div class="row p-2">
         <article class="col-8">
@@ -108,33 +182,115 @@
             chế độ ăn uống khoa học.
           </p>
         </article>
-        <aside class="col-4">
-          <h3>Bình luận bài viết tại đây</h3>
-          <textarea
-            placeholder="Nhập bình luận của bạn"
-            rows="2"
-            cols="50"
-          ></textarea>
-          <button class="bg-success text-white rounded-2 p-2">
-            Gửi bình luận
-          </button>
-          <h3>Danh sách các bình luận:</h3>
-          <ul>
-            <li><strong>Bình An: </strong>Bài viết rất hữu ích</li>
-            <li><strong>Bình An: </strong>Cảm ơn những chia sẻ bổ ích</li>
-          </ul>
+
+
+        <aside >
+          <div class="container mt-5">
+  <h3 class="mb-4">Comments</h3>
+
+  <!-- Comment Form -->
+  <div class="comment-box">
+    <h5>Leave a Comment</h5>
+    <form>
+      <div class="mb-3">
+        <label for="commentName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="commentName" placeholder="Your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="commentMessage" class="form-label">Comment</label>
+        <textarea class="form-control" id="commentMessage" rows="3" placeholder="Your comment" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Post Comment</button>
+    </form>
+  </div>
+
+  <!-- Displayed Comments -->
+  <div class="mt-4">
+    <div class="d-flex comment-box">
+      <img src="https://via.placeholder.com/50" alt="User">
+      <div>
+        <h6 class="mb-0">John Doe <small class="text-muted">3 hours ago</small></h6>
+        <p>This is an example comment to demonstrate the Bootstrap comment section styling.</p>
+        <div class="comment-actions">
+          <a href="#" class="me-3">Reply</a>
+          <a href="#">Like</a>
+        </div>
+
+        
+        
+      </div>
+    </div>
+
+    <!-- Nested Reply -->
+    <div class="d-flex reply-box mt-3">
+          <img src="https://via.placeholder.com/50" alt="User">
+          <div>
+            <h6 class="mb-0">Jane Smith <small class="text-muted">2 hours ago</small></h6>
+            <p>Thank you for the feedback! This is a nested reply.</p>
+            <div class="comment-actions">
+              <a href="#" class="me-3">Reply</a>
+              <a href="#">Like</a>
+            </div>
+          </div>
+        </div>
+
+    <!-- Additional Comment -->
+    <div class="d-flex comment-box mt-3">
+      <img src="https://via.placeholder.com/50" alt="User">
+      <div>
+        <h6 class="mb-0">Alex Brown <small class="text-muted">1 day ago</small></h6>
+        <p>This is another example comment with no replies yet.</p>
+        <div class="comment-actions">
+          <a href="#" class="me-3">Reply</a>
+          <a href="#">Like</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         </aside>
       </div>
     </div>
   
-    <footer class="bg-dark text-white text-center py-3 mt-auto">
-      <p class="mb-0">&copy;Copyright by FPT Polytechnic</p>
-    </footer>
+    <footer>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">hehe</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>&copy; 2024 Blog của Tôi. Tất cả quyền được bảo lưu.</strong>
+        
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      
+    </div>
+  </div>
+</footer>
   </template>
   
   <script>
   export default {
-    name: "Lab3Bai3",
+    name: "PostDetil",
   };
   </script>
   
